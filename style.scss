@@ -1,0 +1,162 @@
+// body::before,
+// $object_color:linear-gr
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.card-container {
+  position: relative;
+  z-index: 5;
+  transform-style: preserve-3d;
+  transition: 1000ms;
+  //   border: 5px solid blue;
+}
+.container2:hover > .card-container {
+  transform: rotateY(180deg);
+}
+.container1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: rgb(47, 0, 90);
+  z-index: 4;
+}
+.container1::after {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  border-radius: 50%;
+  content: "";
+  height: 250px;
+  width: 250px;
+  background-image: linear-gradient(90deg, blue, pink);
+}
+.container1::before {
+  position: absolute;
+  bottom: 100px;
+  right: 100px;
+  border-radius: 50%;
+  content: "";
+  height: 250px;
+  width: 250px;
+  background-image: linear-gradient(90deg, blue, pink);
+  //   background-color: blue;
+}
+.frontside,
+.backside {
+  //   position: absolute;
+  height: 200px;
+  width: 300px;
+  z-index: 100;
+  border-radius: 15px;
+  backdrop-filter: blur(15px);
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 16px 16px 20px rgba(0, 0, 0, 0.5);
+  backface-visibility: hidden;
+}
+// .card::after {
+
+// }
+.img_container {
+  height: 50px;
+  width: 50px;
+}
+.img_container.logo {
+  height: 40px;
+  width: 40px;
+}
+img.image {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.sml-cntnr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 0;
+  //   border: 1px solid green;
+}
+.full-logo-cntnr {
+  height: 40px;
+  width: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding: 27px 15px;
+}
+.card-No {
+  text-align-last: right;
+  margin-right: 10px;
+}
+.card-info {
+  display: flex;
+}
+.card-info-dates {
+  color: white;
+  display: flex;
+  list-style: none;
+  margin-left: 10px;
+  margin-bottom: 7px;
+  //   justify-content: center;
+}
+.card-info-dates li {
+  display: flex;
+  align-items: center;
+  //   border: 1px solid rgb(0, 98, 128);
+  text-align: center;
+  margin-right: 5px;
+}
+.card-info-dates li h6 {
+  font-size: 7px;
+}
+.mag-strip {
+  height: 40px;
+  width: 100%;
+  background-color: black;
+  margin-top: 27px;
+}
+.signature {
+  margin-left: 5px;
+  margin-top: 5px;
+}
+.sig-strip {
+  position: relative;
+  height: 30px;
+  width: 200px;
+  //   border: 1px solid red;
+  background: repeating-linear-gradient(rgb(187, 187, 187), white 6px);
+  border-radius: 5px;
+}
+.sig-strip::after {
+  content: "555";
+  position: absolute;
+  top: 3px;
+  left: 198px;
+  background-color: antiquewhite;
+  border-radius: 0px 5px 5px 0px;
+  padding: 2px;
+  padding-left: 5px;
+}
+// .card.frontside {
+//   position: absolute;
+// }
+.frontside {
+  position: absolute;
+}
+.backside {
+  //   position: absolute;
+  // transition: 0ms;
+  transform: rotateY(180deg);
+  //   visibility: hidden;
+}
+
+.backside h6#lorem {
+  padding: 10px;
+}
